@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="ss/app_logo_main.png" alt="Logo" width="400">
+	<img src="https://i.ibb.co/hHrzvNm/logo.jpg" alt="Logo" width="400">
 	<h2 align="center">AIDRP</h2>
 
   <p align="center">
