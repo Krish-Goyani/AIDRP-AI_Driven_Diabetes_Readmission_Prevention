@@ -30,6 +30,9 @@
     <li>
       <a href="#UN17 Goals Included">UN17 Goals Included</a>
     </li>
+    <li>
+      <a href="#UN17 Goals Included">Protoyype images and video</a>
+    </li>
   </ol>
 </details>
 
@@ -77,7 +80,13 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 </div>
 </div>
 
+## Protoyype images and video
 
+<img src="https://i.ibb.co/mNpg5bV/NGO.png" alt="NGO" border="0"></a><br />
+
+<img src="https://i.ibb.co/kJLyLYj/Whats-App-Image-2024-01-21-at-12-02-20-PM.jpg" alt="Whats-App-Image-2024-01-21-at-12-02-20-PM" border="0">
+
+[Watch the video](https://youtu.be/wnj20jZMTYA)
 
 
 
