@@ -80,7 +80,7 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 </div>
 </div>
 
-## Protoype
+## Prototype
 
 <img src="https://i.ibb.co/mNpg5bV/NGO.png" alt="NGO" border="0"></a><br />
 
