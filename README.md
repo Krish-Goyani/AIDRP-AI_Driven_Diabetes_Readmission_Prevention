@@ -65,9 +65,18 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 
 <!-- GOALS -->
 ## UN17 Goals Included
-Good health and well-beings              | Ensure sustainable consumption and production patterns            |  Climate action 
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](https://developers.google.com/community/images/gdsc-solution-challenge/goal-01_480.png?raw=true)|![](https://developers.google.com/community/images/gdsc-solution-challenge/goal-02_480.png?raw=true)|![](https://developers.google.com/community/images/gdsc-solution-challenge/goal-10_480.png?raw=true)
+<div style="padding:12px; display:flex; gap:30px">
+<div>
+<h6>Climate Action</h6>
+<img style="margin-top:25px" src="https://i.ibb.co/NYRmypy/logo-2.jpg" alt="logo-2">
+</div>
+
+<div>
+<h6>Good Health And Well Being</h6>
+<img src="https://i.ibb.co/xJbZZy6/logo-3.jpg" alt="logo-3">
+</div>
+</div>
+
 
 
 
