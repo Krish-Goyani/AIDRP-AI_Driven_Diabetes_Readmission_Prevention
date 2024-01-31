@@ -5,3 +5,9 @@ data_ingestion:
   source_URL : https://github.com/Krish-Goyani/DataSets/raw/main/diabetes+130-us+hospitals+for+years+1999-2008%20(1).zip
   local_data_file : artifacts/data_ingestion/data.zip
   unzip_dir : artifacts/data_ingestion
+
+
+data_validation :
+  root_dir : artifacts/data_validation
+  unzip_data_dir : artifacts/data_ingestion/diabetic_data.csv
+  STATUS_FILE : artifacts/data_validation/status.txt
