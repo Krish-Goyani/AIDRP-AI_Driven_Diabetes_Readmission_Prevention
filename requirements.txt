@@ -1,3 +1,5 @@
+os
+pillow
 pandas
 numpy
 scikit-learn
@@ -7,5 +9,7 @@ pyYAML
 ensure==1.0.2
 types-pyYAML
 pathlib
+streamlit
+google-generativeai
 
 -e .
