@@ -5,7 +5,7 @@ import google.generativeai as genai
 st.set_page_config(
     page_title="AIDRP",
     page_icon="🧑‍⚕️")
-import streamlit as st
+
 
 with st.sidebar:
     st.info("I'm an AI chatbot not a doctor, Always consult your doctor for any medical issues and do not rely solely on information provided here", icon="ℹ️")
