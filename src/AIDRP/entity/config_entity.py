@@ -14,3 +14,14 @@ class DataValidationConfig:
     unzip_data_dir : Path
     STATUS_FILE : str
     all_schema : dict
+
+
+
+@dataclass(frozen=True)
+class ModelEvalutionConfig:
+    root_dir:Path
+    test_data_path: Path
+    model_path: Path
+    metric_file_name: Path
+    all_params: dict
+    target_column : str

@@ -1,7 +1,7 @@
 from src.AIDRP.constants import *
 from src.AIDRP.utils.common import read_yaml,create_directories
 
-from src.AIDRP.entity.config_entity import DataIngestionConfig,DataValidationConfig
+from src.AIDRP.entity.config_entity import DataIngestionConfig,DataValidationConfig,ModelEvalutionConfig
 
 class ConfigurationManager:
     def __init__(self,
@@ -43,4 +43,24 @@ class ConfigurationManager:
 
 
         return data_validation_config
+    
+
+
+
+
+    def get_model_evalution_config(self)->ModelEvalutionConfig:
+        config = self.config.model_evalution
+        params = self.params.CatBoostClassifier
+        schema = self.schema.TARGET_COLUMN
+
+        model_evalution_config = ModelEvalutionConfig(
+            root_dir= config.root_dir,
+            test_data_path=config.test_data_path,
+            model_path=config.model_path,
+            metric_file_name=config.metric_file_name,
+            all_params=params,
+            schema = schema.readmitted
+        )
+
+        return model_evalution_config
         
