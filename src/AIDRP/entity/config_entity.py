@@ -16,6 +16,27 @@ class DataValidationConfig:
     all_schema : dict
 
 
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_path: Path
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir : Path
+    train_data_path : Path
+    test_data_path : Path
+    model_name:str
+    iterations: int
+    learning_rate: float
+    depth: int
+    l2_leaf_reg: float
+    bootstrap_type: str
+    random_strength: float
+    bagging_temperature: float
+    od_type: str
+    od_wait: str
+    target_column: str
 
 @dataclass(frozen=True)
 class ModelEvalutionConfig:

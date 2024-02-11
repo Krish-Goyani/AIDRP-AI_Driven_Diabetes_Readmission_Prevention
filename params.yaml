@@ -1,9 +1,10 @@
-CatBoostClassifier : 'iterations': 941
-         'learning_rate': 0.023686159674872375
-          'depth': 10
-           'l2_leaf_reg': 3.6387329072946222e-06
-            'bootstrap_type': 'Bayesian'
-             'random_strength': 0.20380435907308095
-              'bagging_temperature': 6.662726615302303
-               'od_type': 'IncToDec'
-                'od_wait': 50
+CatBoostClassifier:
+  iterations: 941
+  learning_rate: 0.023686159674872375
+  depth: 10
+  l2_leaf_reg: 3.6387329072946222e-06
+  bootstrap_type: Bayesian
+  random_strength: 0.20380435907308095
+  bagging_temperature: 6.662726615302303
+  od_type: IncToDec
+  od_wait: 50

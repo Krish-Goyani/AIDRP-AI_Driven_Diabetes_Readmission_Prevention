@@ -1,1 +1,1 @@
-Validation Status :True
+Validation status: True
