@@ -11,7 +11,7 @@ with st.sidebar:
     st.info("I'm an AI chatbot not a doctor, Always consult your doctor for any medical issues and do not rely solely on information provided here", icon="ℹ")
 
 
-genai.configure(api_key="AIzaSyBIYgSCx_HR92lU1fmu11idoFyesZ6m8MY")
+genai.configure(api_key="Enter your Gemini API key")
 model = genai.GenerativeModel('gemini-pro')
 
 # Gemini uses 'model' for assistant; Streamlit uses 'assistant'
