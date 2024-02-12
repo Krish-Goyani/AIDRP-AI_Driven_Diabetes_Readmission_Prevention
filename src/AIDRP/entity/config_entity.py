@@ -23,10 +23,10 @@ class DataTransformationConfig:
 
 @dataclass(frozen=True)
 class ModelTrainerConfig:
-    root_dir : Path
+    root_dir: Path
     train_data_path : Path
     test_data_path : Path
-    model_name:str
+    model_name: str
     iterations: int
     learning_rate: float
     depth: int
@@ -35,14 +35,16 @@ class ModelTrainerConfig:
     random_strength: float
     bagging_temperature: float
     od_type: str
-    od_wait: str
+    od_wait:int
     target_column: str
+  
+
 
 @dataclass(frozen=True)
-class ModelEvalutionConfig:
-    root_dir:Path
+class ModelEvaluationConfig:
+    root_dir: Path
     test_data_path: Path
     model_path: Path
-    metric_file_name: Path
     all_params: dict
-    target_column : str
+    metric_file_name: Path
+    target_column: str

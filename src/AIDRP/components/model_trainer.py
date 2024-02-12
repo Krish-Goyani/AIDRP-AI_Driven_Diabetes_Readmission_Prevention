@@ -1,10 +1,10 @@
 import pandas as pd
 import os
 from src.AIDRP.logging import logger
-from sklearn.linear_model import ElasticNet
 import joblib
 import catboost
-from src.AIDRP.config.configuration import ModelTrainerConfig
+from src.AIDRP.entity.config_entity import ModelTrainerConfig
+
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
         self.config = config
@@ -20,6 +20,7 @@ class ModelTrainer:
         test_x = test_data.drop([self.config.target_column], axis=1)
         train_y = train_data[[self.config.target_column]]
         test_y = test_data[[self.config.target_column]]
+
 
         params={'iterations': self.config.iterations, 'learning_rate': self.config.learning_rate,
                  'depth': self.config.depth, 'l2_leaf_reg': self.config.l2_leaf_reg, 

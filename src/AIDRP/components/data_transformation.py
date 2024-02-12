@@ -6,7 +6,6 @@ import random
 from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 from src.AIDRP.entity.config_entity import DataTransformationConfig
-
 class DataTransformation:
     def __init__(self, config: DataTransformationConfig):
         self.config = config
@@ -15,11 +14,9 @@ class DataTransformation:
     #You can perform all kinds of EDA in ML cycle here before passing this data to the model
 
     # I am only adding train_test_spliting cz this data is already cleaned up
-        
-    
-    def drop_columns(self,data):
-
+    def data_transformation(self):
         ## Drop the value which is not relevant for the model
+        data = pd.read_csv(self.config.data_path)
 
         data.drop(index=[30506, 75551, 82573],inplace=True)
         data.drop_duplicates(subset='patient_nbr',keep='first',inplace=True)
@@ -29,12 +26,23 @@ class DataTransformation:
                             'glyburide-metformin','glipizide-metformin',
                             'glimepiride-pioglitazone','metformin-rosiglitazone','metformin-pioglitazone'],inplace=True)
          
-    def diag_cluster(self,col,data):
+    #def diag_cluster(self,col,data):
 
+         
+         
                             # all three diag features have more than 700 unqie we are grouping them based on ICD-9 codes
-                            diag_list=[]
 
-                            for x in data[col]:
+        index=[]
+        index=list(data[data['diag_1']=='?'].index)
+        index.extend(data[data['diag_2']=='?'].index)
+        index.extend(data[data['diag_3']=='?'].index)
+        data.drop(index=index,inplace=True)
+
+        # all three diag features have more than 700 unqie we are grouping them based on ICD-9 codes
+        diag_cols=['diag_1','diag_2','diag_3']
+        for i in diag_cols:
+            diag_list=[]
+            for x in data[i]:
                                 # If the value in the 'col' column contains 'V' or 'E', it is assigned a cluster value of 18.
                                 if 'V' in x or 'E' in x: 
                                     diag_list.append(18)
@@ -76,20 +84,13 @@ class DataTransformation:
                                     diag_list.append(17)
 
 
-                            return diag_list
-    
-    def feature_enginnerings(self,data):
+            data[i]=diag_list
 
 
         #feature engineering
         # replace any occurrences of '?' in the 'race' column with 'Other'.
         data['race'] = data['race'].apply(lambda x: 'Other' if x == '?' else x)
-
-        index=[]
-        index=list(data[data['diag_1']=='?'].index)
-        index.extend(data[data['diag_2']=='?'].index)
-        index.extend(data[data['diag_3']=='?'].index)
-        data.drop(index=index,inplace=True)
+        
 
 
         data['admission_type_id']=data['admission_type_id'].apply(lambda x : 5 if x in (6,8) else x)
@@ -152,9 +153,6 @@ class DataTransformation:
         # Apply the mapping to the 'max_glu_serum' column
         data['max_glu_serum'] = data['max_glu_serum'].map(mapping_dict)
 
-        data['diag_1']=self.diag_cluster('diag_1',data)
-        data['diag_2']=self.diag_cluster('diag_2',data)
-        data['diag_3']=self.diag_cluster('diag_3',data)
         
         #replace age range with 1 to 10
         age_ranges = ['[0-10)', '[10-20)', '[20-30)', '[30-40)', '[40-50)', '[50-60)','[60-70)', '[70-80)', '[80-90)', '[90-100)']
@@ -169,14 +167,6 @@ class DataTransformation:
         encoder=LabelEncoder()
         data['race']=encoder.fit_transform(data['race'])  
 
-    def preprocessing(self):
-        data= pd.read_csv(self.config.data_path)
-       
-
-        self.drop_columns(data)
-
-        self.feature_enginnerings(data)
-
        # Performing a merge (cross join) on the common key
       
         X = data[['num_lab_procedures', 'num_medications', 'diag_3', 'diag_1', 'age',
@@ -187,8 +177,7 @@ class DataTransformation:
             'number_emergency','max_glu_serum', 'A1Cresult']]
         y = data['readmitted']
 
-        sm = SMOTE(sampling_strategy='minority', random_state=42, n_jobs=-1)
-
+        sm = SMOTE(sampling_strategy='minority', random_state=42)
 
         X_res, y_res = sm.fit_resample(X, y)
        # Convert X_res to DataFrame if it's not already
@@ -196,27 +185,17 @@ class DataTransformation:
         data=X_res
 
         # we have found that there are many entries of some users in dataset it will make our ML algorithm biased so removing them.
-        train,test = train_test_split(data)
-        # train.to_csv(self.config.root_dir,"train.csv",index=False)
-        # test.to_csv(self.config.root_dir,"test.csv",index=False)
-    
+        train, test = train_test_split(data)
 
-      # Parent Directory path (use raw string to avoid escape characters)
-        #parent_dir = r"C:\DataScience\Projects\folder\AIDRP-AI_Driven_Diabetes_Readmission_Prevention\artifacts\data_transformation"
-
-        # Create the directory for data transformation if it doesn't exist
-        #directory_path = os.path.join(parent_dir, 'data_transformation')
-        #os.makedirs(directory_path, exist_ok=True)
-
-        train.to_csv(self.config.root_dir, 'train.csv', index=False)
-        test.to_csv(self.config.root_dir, 'test.csv', index=False)
-
-        logger.info("Split data into training and test sets")
-
-     
+        train.to_csv(os.path.join(self.config.root_dir, "train.csv"),index = False)
+        test.to_csv(os.path.join(self.config.root_dir, "test.csv"),index = False)
 
         logger.info("Splited data into training and test sets")
         logger.info(train.shape)
         logger.info(test.shape)
 
+        print(train.shape)
+        print(test.shape)
 
+
+                

@@ -1,17 +1,17 @@
 import streamlit as st
-import os
 import google.generativeai as genai
+from pathlib import Path
 
 st.set_page_config(
     page_title="AIDRP",
-    page_icon="🧑‍⚕️")
+    page_icon="🧑‍⚕")
 
 
 with st.sidebar:
-    st.info("I'm an AI chatbot not a doctor, Always consult your doctor for any medical issues and do not rely solely on information provided here", icon="ℹ️")
+    st.info("I'm an AI chatbot not a doctor, Always consult your doctor for any medical issues and do not rely solely on information provided here", icon="ℹ")
 
-# Initialize Gemini-Pro 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+genai.configure(api_key="AIzaSyBIYgSCx_HR92lU1fmu11idoFyesZ6m8MY")
 model = genai.GenerativeModel('gemini-pro')
 
 # Gemini uses 'model' for assistant; Streamlit uses 'assistant'
@@ -21,7 +21,7 @@ def role_to_streamlit(role):
   else:
     return role
 
-st.header(body='🩺Your personal AI doctor! 👩‍⚕️',divider='green')
+st.header(body='🩺Your personal AI doctor! 👩‍⚕',divider='green')
 st.text(body="I'm your healthcare helper powered by Google's most capable AI model- Gemini.🧠")
 
 # Add a Gemini Chat history object to Streamlit session state

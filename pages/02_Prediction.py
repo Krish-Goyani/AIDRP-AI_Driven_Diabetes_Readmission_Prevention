@@ -102,8 +102,8 @@ if submitted:
     obj = PredictionPipeline()
     predicted_value = obj.predict(data)
 
-if predicted_value == 1:
-    st.error("There is a chance that the patient will be readmitted within 30 days!", icon="🚨")
+    if predicted_value == 1:
+        st.error("There is a chance that the patient will be readmitted within 30 days!", icon="🚨")
 
-elif predicted_value == 0:
-     st.success("The patient is safe to discharge", icon="✅")
+    elif predicted_value == 0:
+        st.success("The patient is safe to discharge", icon="✅")

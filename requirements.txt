@@ -1,8 +1,11 @@
-imblearn
+scikit-learn
+google.generativeai
+streamlit
 catboost
+imblearn
 pandas 
 notebook
-numpy
+numpy==1.22.4
 scikit-learn
 matplotlib
 python-box==6.0.2
@@ -10,5 +13,6 @@ pyYAML
 ensure==1.0.2
 joblib
 types-PyYAML
-
+pathlib
+python-dotenv
 -e .

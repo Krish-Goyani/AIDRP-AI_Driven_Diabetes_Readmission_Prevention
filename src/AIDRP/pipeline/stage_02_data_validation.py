@@ -1,5 +1,5 @@
 from src.AIDRP.config.configuration import ConfigurationManager
-from src.AIDRP.components.data_validation import DataValidation
+from src.AIDRP.components.data_validation import DataValiadtion
 from src.AIDRP.logging import logger
 
 
@@ -12,7 +12,7 @@ class DataValidationTrainingPipeline:
     def main(self):
         config = ConfigurationManager()
         data_validation_config = config.get_data_validation_config()
-        data_validation = DataValidation(config=data_validation_config)
+        data_validation = DataValiadtion(config=data_validation_config)
         data_validation.validate_all_columns()
 
 
