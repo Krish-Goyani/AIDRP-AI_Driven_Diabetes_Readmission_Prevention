@@ -2,16 +2,17 @@ import streamlit as st
 import google.generativeai as genai
 from pathlib import Path
 
+# Set Streamlit page configuration
 st.set_page_config(
     page_title="AIDRP",
-    page_icon="🧑‍⚕")
+    page_icon="🧑‍⚕️")
 
 
 with st.sidebar:
     st.info("I'm an AI chatbot not a doctor, Always consult your doctor for any medical issues and do not rely solely on information provided here", icon="ℹ")
 
 
-genai.configure(api_key="Enter your Gemini API key")
+genai.configure(api_key="Please put your Gemini API key here.")
 model = genai.GenerativeModel('gemini-pro')
 
 # Gemini uses 'model' for assistant; Streamlit uses 'assistant'

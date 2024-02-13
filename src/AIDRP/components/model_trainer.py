@@ -1,7 +1,7 @@
 import pandas as pd
 import joblib
 import catboost
-
+from pathlib import Path
 from src.AIDRP.logging import logger  
 from src.AIDRP.entity.config_entity import ModelTrainerConfig
 
@@ -41,6 +41,6 @@ class ModelTrainer:
                            random_state=42, verbose=False)
         model.fit(X_train, y_train)
 
+        model_name = self.config.model_name
         # Save trained model
-        joblib.dump(model, os.path.join(self.config.root_dir, 
-                                       self.config.model_name))
+        joblib.dump(model, Path(Path(self.config.root_dir)/model_name))

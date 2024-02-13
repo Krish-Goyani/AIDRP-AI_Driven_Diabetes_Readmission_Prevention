@@ -19,7 +19,8 @@ class DataIngestion:
         """
         Download raw data file from source url if not already present
         """
-        if not os.path.exists(self.config.local_data_file):
+        
+        if not Path(self.config.local_data_file).exists():
             filename, headers = request.urlretrieve(
                 url=self.config.source_URL, 
                 filename=self.config.local_data_file
@@ -33,7 +34,8 @@ class DataIngestion:
         Extracts downloaded zip file into unzip directory
         """
         unzip_path = self.config.unzip_dir
-        os.makedirs(unzip_path, exist_ok=True)
+        unzip_path = Path(unzip_path)
+        unzip_path.mkdir(parents=True, exist_ok=True)
         
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
             zip_ref.extractall(unzip_path)

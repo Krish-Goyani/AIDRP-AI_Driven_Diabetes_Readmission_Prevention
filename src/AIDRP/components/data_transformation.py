@@ -3,6 +3,7 @@ from src.AIDRP.logging import logger
 from sklearn.model_selection import train_test_split
 import pandas as pd
 import random
+from pathlib import Path
 from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 from src.AIDRP.entity.config_entity import DataTransformationConfig
@@ -209,8 +210,8 @@ class DataTransformation:
         train, test = train_test_split(data)
         
         # Export preprocessed data
-        train.to_csv(os.path.join(self.config.root_dir, "train.csv"),index = False)
-        test.to_csv(os.path.join(self.config.root_dir, "test.csv"),index = False)
+        train.to_csv(Path(Path(self.config.root_dir)/"train.csv"),index = False)
+        test.to_csv(Path(Path(self.config.root_dir)/"test.csv"),index = False)
 
         logger.info("Splited data into training and test sets")
         logger.info(train.shape)
