@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 from src.AIDRP.pipeline.prediction import PredictionPipeline
 
+# Set Streamlit page configuration
 st.set_page_config(
     page_title="AIDRP",
     page_icon="🧑‍⚕️",
@@ -12,6 +13,7 @@ st.set_page_config(
 st.header('Diabetes Readmission Risk Predictor',divider='rainbow')
 st.write("Please enter the requested details of the patient, and the model will predict whether the patient has a risk of readmission within 30 days of discharge or not.")
 
+# mapping dictionary for categorical variables
 age_dict = {'[0-10)':1, '[10-20)':2, '[20-30)':3, '[30-40)':4, '[40-50)':5, '[50-60)':6,'[60-70)':7, '[70-80)':8, '[80-90)':9, '[90-100)':10}
 race_dict = {'AfricanAmerican':0, 'Asian':1, 'Caucasian':2, 'Hispanic':3, 'Other':4}
 admission_source_id_dict = {'9, 15, 17, 20, 21':9,'1, 2, 3':1,'4, 10, 22':4,'5, 6, 18, 19, 25, 26':5,'11, 12, 13, 14':11}
@@ -80,10 +82,11 @@ with st.form("pred_form",clear_on_submit=True, border=True):
 
 
     submitted = st.form_submit_button("Submit")
+
+    
 if submitted:
        
     st.write("submitted")
-#st.write(f'The risk of 30-day readmission is {pred_prob:.2%}')
 
     data = [age_dict[age], race_dict[race], admission_source_id_dict[admission_source_id], admission_type_id_dict[admission_type_id],
 

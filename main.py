@@ -2,8 +2,8 @@ from src.AIDRP.logging import logger
 from src.AIDRP.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from src.AIDRP.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from src.AIDRP.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
-from AIDRP.pipeline.stage_04_model_training import ModelTrainerTrainingPipeline
-from AIDRP.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
+from src.AIDRP.pipeline.stage_04_model_training import ModelTrainerTrainingPipeline
+from src.AIDRP.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
 
 STAGE_NAME = "Data Ingestion stage"
 try:

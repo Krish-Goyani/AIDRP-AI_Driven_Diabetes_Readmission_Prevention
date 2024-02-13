@@ -1,5 +1,4 @@
 # we are using some functions repeatedly we wil store it here
-
 import os
 from box.exceptions import BoxValueError
 import yaml
