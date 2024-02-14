@@ -16,4 +16,5 @@ types-PyYAML
 pathlib
 subprocess.run
 pillow==9.0.0
+python-dotenv
 -e .

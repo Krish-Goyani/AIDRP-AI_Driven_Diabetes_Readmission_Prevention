@@ -60,7 +60,7 @@ st.header('Contact Us', divider='rainbow')
 st.write("""
 To learn more about AIDRP and how it can help your organization, please reach out:
 
-info@aidrp.ai
+goyani@duck.com
 
-1992, Patel Boarding
+
 """)

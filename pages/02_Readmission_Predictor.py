@@ -86,8 +86,6 @@ with st.form("pred_form",clear_on_submit=True, border=True):
     
 if submitted:
        
-    st.write("submitted")
-
     data = [age_dict[age], race_dict[race], admission_source_id_dict[admission_source_id], admission_type_id_dict[admission_type_id],
 
             discharge_disposition_id_dict[discharge_disposition_id], int(num_lab_procedures), int(num_medications), change_dict[change],
