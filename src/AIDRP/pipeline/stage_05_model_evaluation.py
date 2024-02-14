@@ -1,6 +1,6 @@
-from AIDRP.logging import logger
-from AIDRP.config.configuration import ConfigurationManager
-from AIDRP.components.model_evaluation import ModelEvaluation
+from src.AIDRP.logging import logger
+from src.AIDRP.config.configuration import ConfigurationManager
+from src.AIDRP.components.model_evaluation import ModelEvaluation
 
 STAGE_NAME = "Model Evaluation Stage"
 
