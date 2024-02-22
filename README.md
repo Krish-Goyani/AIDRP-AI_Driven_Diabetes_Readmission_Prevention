@@ -106,10 +106,10 @@ Follow these steps to get started with the project:
    
 4. **Create a Virtual Environment:**
    
-   Create a new virtual environment using Python 3.9.1:
+   Create a new virtual environment using Python 3.9.6:
 
    ```bash
-   conda create -n your_env_name python=3.9.1
+   conda create --name your_env_name python=3.9.6 -y
    ```
    Replace your_env_name with the desired name for your virtual environment.
    
