@@ -63,11 +63,12 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 
 
 ## Technologies
-- TensorFlow
-- Python
 - Gemini API
-- Plotly
+- Python
 - Streamlit
+- Catboost
+- Plotly
+
 
 <!-- GOALS -->
 ## UN17 Goals Included
