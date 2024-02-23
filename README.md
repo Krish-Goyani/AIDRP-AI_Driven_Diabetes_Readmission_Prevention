@@ -72,6 +72,8 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 
 <!-- GOALS -->
 ## UN17 Goals Included
+![Sustainable_Development_Goal_13Climate svg](https://github.com/Krish-Goyani/AIDRP-AI_Driven_Diabetes_Readmission_Prevention/assets/130249490/950342dc-4533-4ac0-83f6-33316d37a7f0){: width="100px" height="100px"}
+
 <div style="padding:12px; display:flex; gap:30px">
 <div>
 <h6>Climate Action</h6>
