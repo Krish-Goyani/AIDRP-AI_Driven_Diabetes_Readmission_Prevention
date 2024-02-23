@@ -89,16 +89,17 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 </div>
 
 ## Prototype
-<div>
-	
+<div style="display:flex; flex-wrap:wrap; gap:2%; justify-content:center;">
+<img style="width:49%; margin-top:10px;" src="./assets/1.png">
+<img style="width:49%; margin-top:10px;" src="./assets/2.png">
+<img style="width:49%; margin-top:10px;" src="./assets/3.png">
+<img style="width:49%; margin-top:10px;" src="./assets/4.png">
+<img style="width:49%; margin-top:10px;" src="./assets/5.png">
+<img style="width:49%; margin-top:10px;" src="./assets/6.png">
+<img style="width:49%; margin-top:10px;" src="./assets/7.png">
 </div>
 
-<img src="https://drive.google.com/file/d/1YFyz-sb6podZwZ92T0ulBPVgzQAe-GCU/view?usp=sharing" alt="NGO" border="0"></a><br />
-
-<img src="https://i.ibb.co/kJLyLYj/Whats-App-Image-2024-01-21-at-12-02-20-PM.jpg" alt="Whats-App-Image-2024-01-21-at-12-02-20-PM" border="0">
-
-[Watch the video](https://youtu.be/wnj20jZMTYA)
-
+[View the video demonstration](https://youtu.be/apUY99YulMo)
 
 ## How to Start Project
 
