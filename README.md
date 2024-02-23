@@ -126,7 +126,13 @@ Follow these steps to get started with the project:
    ```bash
    conda activate your_env_name
    ```
-5. **Install Dependencies:**
+5. **Configure API Credentials:**
+   Create a .env file in the root directory of the project.Add your Gemini API key to this file like so:
+   ```python
+   GEMINI_API_KEY = "your_api_key_here"
+   ```
+   
+6. **Install Dependencies:**
    
    Install the project dependencies by running:
    ```bash
@@ -134,7 +140,7 @@ Follow these steps to get started with the project:
    ```
    This command will install all the required packages listed in the requirements.txt file.
 
-6. **Run the Streamlit App:**
+7. **Run the Streamlit App:**
    ```bash
    streamlit run AIDRP.py
    ```
