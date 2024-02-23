@@ -2,6 +2,8 @@ import os
 from pathlib import Path
 import logging
 
+#runing this file will automatically create the necessary files and directories because creating them by hand would take a long time.
+
 logging.basicConfig(level = logging.INFO,  format= '[%(asctime)s]: %(message)s:')
 
 project_name = "AIDRP"

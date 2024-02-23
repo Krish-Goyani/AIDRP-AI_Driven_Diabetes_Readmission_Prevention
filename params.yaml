@@ -1,3 +1,4 @@
+#stores required parameters for model.
 CatBoostClassifier:
   iterations: 941
   learning_rate: 0.023686159674872375

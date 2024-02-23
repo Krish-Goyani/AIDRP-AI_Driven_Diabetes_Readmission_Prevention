@@ -26,6 +26,8 @@ A1Cresult_dict = {"Norm": 1, ">7": 2, ">8": 2.5}
 diabetesMed_dict = {'No':0, 'Yes':1}
 medicines_dict = {'No':1, 'Up':3, 'Steady':2, 'Down':0}
 
+#data collection  form
+
 with st.form("pred_form",clear_on_submit=True, border=True):
 
     age = st.selectbox("Age of patient",placeholder="Enter age of patient",options=age_dict.keys())
