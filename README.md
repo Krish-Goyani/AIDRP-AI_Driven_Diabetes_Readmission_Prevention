@@ -72,23 +72,28 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 
 <!-- GOALS -->
 ## UN17 Goals Included
-![Sustainable_Development_Goal_13Climate svg](https://github.com/Krish-Goyani/AIDRP-AI_Driven_Diabetes_Readmission_Prevention/assets/130249490/950342dc-4533-4ac0-83f6-33316d37a7f0){: width="50px" height="50px"}
+
 
 <div style="padding:12px; display:flex; gap:30px">
 <div>
-<h6>Climate Action</h6>
-<img style="margin-top:25px" src="https://i.ibb.co/NYRmypy/logo-2.jpg" alt="logo-2">
+<div>
+<h4>Good Health And Well Being</h4>
+<img style="width:300px ; height:300px" src="https://i.ibb.co/xJbZZy6/logo-3.jpg" alt="logo-3">
+</div>
+	
+<h4>Climate Action</h4>
+<img style="width:300px ; height:300px"  src="https://i.ibb.co/NYRmypy/logo-2.jpg" alt="logo-2">
 </div>
 
-<div>
-<h6>Good Health And Well Being</h6>
-<img src="https://i.ibb.co/xJbZZy6/logo-3.jpg" alt="logo-3">
-</div>
+
 </div>
 
 ## Prototype
+<div>
+	
+</div>
 
-<img src="https://i.ibb.co/mNpg5bV/NGO.png" alt="NGO" border="0"></a><br />
+<img src="https://drive.google.com/file/d/1YFyz-sb6podZwZ92T0ulBPVgzQAe-GCU/view?usp=sharing" alt="NGO" border="0"></a><br />
 
 <img src="https://i.ibb.co/kJLyLYj/Whats-App-Image-2024-01-21-at-12-02-20-PM.jpg" alt="Whats-App-Image-2024-01-21-at-12-02-20-PM" border="0">
 
