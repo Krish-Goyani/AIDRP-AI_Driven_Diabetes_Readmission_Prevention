@@ -34,7 +34,7 @@
       <a href="#Prototype">Protoype</a>
     </li>
     <li>
-	    <a href = "#How to Start Project">How to Start Project</a>
+	    <a href = "#How-to-Start-Project">How to Start Project</a>
     </li>
   </ol>
 </details>
