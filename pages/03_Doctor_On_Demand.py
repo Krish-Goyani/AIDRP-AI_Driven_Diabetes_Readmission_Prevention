@@ -14,6 +14,7 @@ st.set_page_config(
 with st.sidebar:
     st.info("I'm an AI chatbot not a doctor, Always consult your doctor for any medical issues and do not rely solely on information provided here", icon="ℹ")
 
+#Here, we have used the Gemini API with a prompt query. It provides answers related to patient healthcare.
 
 genai.configure(api_key= os.getenv("GEMINI_API_KEY") )
 model = genai.GenerativeModel('gemini-pro')

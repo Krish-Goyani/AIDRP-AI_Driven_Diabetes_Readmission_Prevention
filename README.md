@@ -49,7 +49,7 @@ The 30-day hospital readmission rate following an index hospitalization has beco
 
 
 ## Solution 
-AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hospital readmission rates for diabetes mellitus (DM) patients. The platform is boosted by Gemini API, an AI assistant that answers users' questions regarding diabetes care. By enhancing prediction and prevention of avoidable readmissions, AIDRP can assist hospitals in improving quality of care, reducing costs, and optimizing performance measures. This solution also provides value to DM patients directly. The predictive model is trained on real-world electronic health record (EHR) data from the U.S. Health Facts Medical Database, which contains medical records for 100,244 diabetes patients from 1999 to 2008. It leverages relevant patient health information to identify key drivers of readmissions. Successful implementation of this AI-enabled solution has the potential to significantly enhance outcomes and decrease costs for both diabetes patients and healthcare institutions, reduced medical waste production and provides quality health.
+AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hospital readmission rates for diabetes mellitus (DM) patients. The platform is boosted by the Gemini API. We have added two additional features: one is an AI assistant that answers users' questions regarding diabetes care, and another is MealScan. Suppose you came to India and don't know about a particular meal, like jalebi. Then, you can just upload an image of it, and MealScan will give you an overview, sugar content, and health rating of that meal. By enhancing prediction and prevention of avoidable readmissions, AIDRP can assist hospitals in improving quality of care, reducing costs, and optimizing performance measures. This solution also provides value to DM patients directly. The predictive model is trained on real-world electronic health record (EHR) data from the U.S. Health Facts Medical Database, which contains medical records for 100,244 diabetes patients from 1999 to 2008. It leverages relevant patient health information to identify key drivers of readmissions. Successful implementation of this AI-enabled solution has the potential to significantly enhance outcomes and decrease costs for both diabetes patients and healthcare institutions, reduced medical waste production and provides quality health.
 
 
 ## Users
@@ -64,6 +64,7 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 
 ## Technologies
 - Gemini API
+- Google Cloud Run
 - Python
 - Streamlit
 - Catboost
@@ -97,11 +98,19 @@ AIDRP is an AI-driven platform that can accurately predict and reduce 30-day hos
 <img style="width:49%; margin-top:10px;" src="./assets/5.png">
 <img style="width:49%; margin-top:10px;" src="./assets/6.png">
 <img style="width:49%; margin-top:10px;" src="./assets/7.png">
+<img style="width:49%; margin-top:10px;" src="./assets/8.png">
+<img style="width:49%; margin-top:10px;" src="./assets/9.png">
+
 </div>
 
-[View the video demonstration](https://youtu.be/apUY99YulMo)
+[View the video demonstration (2 minutes)](https://youtu.be/apUY99YulMo)
+[View the video demonstration (1 minutes)](https://youtu.be/3JcbM14BUAQ)
+
 
 ## How to Start Project
+
+For the deployed version, email us at: krishgoyani1137@gmail.com
+
 
 Follow these steps to get started with the project:
 

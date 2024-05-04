@@ -13,6 +13,7 @@ st.set_page_config(
 with st.sidebar:
     st.write("I'm your nutritional ally. Let me test your meal before you eat.")
 
+#Here, we have used the Gemini Vision Pro with a prompt query. It gives an overview, sugar content, and health rating of a meal.
 
 genai.configure(api_key= os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel('gemini-1.0-pro-vision-latest')
